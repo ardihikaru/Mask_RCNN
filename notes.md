@@ -25,5 +25,11 @@ untuk persiapan environment python:
 6. Error: AttributeError: module 'tensorflow' has no attribute 'random_uniform'
    Solution: https://www.tensorflow.org/api_docs/python/tf/keras/backend/random_uniform
 7. Error: AttributeError: module 'tensorflow' has no attribute 'Session'
-   Solution: 
-
+   Solution:
+8. Error: lsmod rmmod
+   $ sudo apt-get install kmod 
+9. Install CUDA 10.0:
+    https://stackoverflow.com/questions/55224016/importerror-libcublas-so-10-0-cannot-open-shared-object-file-no-such-file-or
+    Ini jg:
+    https://stackoverflow.com/questions/57730934/how-can-i-install-tensorflow-gpu-with-latest-version-of-cuda-and-cudnn
+10.

@@ -1,0 +1,206 @@
+## 0.1.0 (十二月 10, 2019)
+  - updates: - initialization - added bump version - added script to test tensorflow CPU or GPU availability
+  - import logging for line 382
+  - Multiple Anchors have same IOU
+  - Fix typos in inspect_data notebook(feature meap -> feature map) Replace 256*256*3 with 256x256x3, since the '*' won't be displayed in Markdown
+  - add warning to load_mask of dataset class
+  - remove unused code (#1227)
+  - Reversed order (1) and (2) in installation
+  - Fix typo in rpn_class_loss_graph
+  - Fix typo in config.py
+  - Fix visualize activations (#1211)
+  - Fix typo "ceate" to "create"
+  - [Bug fix]compute_overlaps_masks
+  - Fix #551
+  - [Bug fix]
+  - [Bug fix] tf.boolean_mask cannot accept name=None
+  - Fix the input shape of anchors in ProposalLayer (#961)
+  - Fix comments in DetectionTargetLayer (#962)
+  - Fix citation markup.
+  - Remove unused method: append_data()
+  - A wrapper for skimage resize() to avoid warnings
+  - use smooth_l1_loss() to reduce code duplication
+  - Fix comments in Detection Layer
+  - Fix PyramidROIAlign output shape
+  - fix output shape of fpn_classifier_graph
+  - Adjust PyramidROIAlign layer shape comment
+  - Tiny correction in README.
+  - Link to new projects in README
+  - Additional comments for the previous commit
+  - add IMAGE_CHANNEL_COUNT class variable to config to make it easier to use Mask_RCNN for non 3-channel images
+  - Fixed comment on GPU_COUNT (#878)
+  - Apply previous commit to the other notebooks
+  - Bug fix: inspect_balloon_model.ipynb
+  - bug fix: the output_shape of roi_gt_class_ids is incorrect
+  - Fixed tabbing issue in previous commit
+  - Added automated epoch recognition for Windows. (#798)
+  - Bugfix for MaskRCNN creating empty log_dir that breaks find_last() - Current implementation creates self.log_dir in set_log_dir() function,   which creates an empty log directory if none exists. This causes   find_last() to fail after creating a model because it finds this new   empty directory instead of the previous training directory. - New implementation moves log_dir creation to the train() function to   ensure it is only created when it will be used.
+  - Fix the comment on output shape in RPN
+  - Comments to explain VIA 2.0 JSON change
+  - Made compatible to new version of VIA JSON format
+  - Make pre_nms_limit configurable
+  - make pre_nms_limit configurable
+  - Add Bibtex to README
+  - Links to two more projects in README
+  - spellcheck visualize.py
+  - spellcheck utils.py
+  - doublecheck on config.py
+  - spellcheck config.py
+  - edit loss desc
+  - Updated Coco Example
+  - Improve previous commit to avoid mutable default arguments
+  - Add no augmentation sources
+  - Add custom callbacks to model training
+  - Update README.md
+  - Fix load_weights() for Keras versions before 2.2
+  - Fix Keras engine topology to saving
+  - Raise clear error if last training weights are not foundIf using the --weights=last (or --model=last) to resume trainingbut the weights are not found now it raises a clear error message.
+  - modified comment for image augmentation line import to include correct 'pip3 install imgaug' instructions
+  - Allow custom backbone implementation through Config.BACKBONE
+  - Allow configuration of FPN layers size and top-down pyramid size
+  - Fix problem with argmax on (0,0) arrays.
+  - Allow dashes in model name. Print a message when re-starting from saved epoch
+  - fix "No such file or directory" if not use: "keras.callbacks.TensorBoard"
+  - fix typo
+  - Fix: color_splash when no masks are detected
+  - Minor cleanup in compute_overlaps_masks()
+  - Update utils.py
+  - Splash sample: fix filename and link to blog post
+  - Headline typo fix in README.md
+  - Replace keep_dims with keepdims in TF calls.
+  - Fix multi-GPU training.
+  - loss weights
+  - Small typo fix
+  - Fix handling detections that return no masks.
+  - Update README.md
+  - Refresh README and link to Mapping Challenge
+  - Fix mask shape in data_generator()
+  - Fix downloading COCO weights in demo.ipynb
+  - Fix so nucleus training doesn’t ignore --subset
+  - Clarify nucleus sample README
+  - Fix path parsing error in previous commit
+  - Fix for multi-GPU training.
+  - Fix to show class score in display_differences()
+  - Add nucleus segmentation sample.
+  - detect_molded() to detect in molded images
+  - Fix to render display_instances() on multiple axis
+  - Map from source image ID to internal ID
+  - Method to compute AP on range of IoU thresholds
+  - New visualization: GT and predictions on one image
+  - New image resizing mode: random crops.
+  - New options for visualize_instances()
+  - Fix epoch counter off-by-1 when resuming training
+  - Fix in AP score in Jupyter notebooks
+  - Add pad64 mode to resize_image()
+  - Fix bugs introduced in recent commits.
+  - Merge refactor/package branch.
+  - Fix ROOT_DIR and other misc updates.
+  - Update .gitignore
+  - Text updates in setup.py and README.
+  - move samples
+  - fix import in ipynb, clear init, minor upadte by comments
+  - update .gitignore
+  - add setup metadata
+  - add setup
+  - add requirements
+  - refactor structure
+  - Refactoring and clean up. No functionality change
+  - Support prediction on images of variable size
+  - Convert config.BACKBONE_SHAPES to a function.
+  - Reduce use of config.IMAGE_SHAPE
+  - Replace last scipy.misc.resize with skimage resize
+  - Clean up mage resizing code.
+  - Fix notebooks to visualize normalized detections
+  - Add image shape and scaling factor to image_meta
+  - Add dtype to printed array info in log().
+  - Fix mask dtype error with COCO validation.
+  - Explicitly set skimage resize mode to hide warning
+  - Remove unnecessary coordinate conversions.
+  - Clean up coordinate normalization.
+  - Config setting to enable/disable BN training
+  - Fix comments
+  - Fix mask resizing crash with tiny masks.
+  - Fix mask resizing when mask is all FG and no BG.
+  - Image augmentation with imgaug.
+  - Set worker count = CPU count.
+  - Fix to run validation on more than one batch.
+  - Remove alpha channel from PNG images by default
+  - Suppress Scipy 0.13 zoom warning
+  - Make gradient norm clipping a config option.
+  - Balloon Color Splash sample.
+  - Select backbone ResNet50/101 in config.
+  - class_ids needs update together with masks
+  - fix as @waleedka suggested in https://github.com/matterport/Mask_RCNN/pull/268
+  - fix nan rpn bbox loss issue
+  - Fixing typos.
+  - Fix README video link.
+  - Add 4K video to README page.
+  - Use mask AP in compute_AP instead
+  - Implement overlap computation based on masks
+  - Merge pull request #167 from Cpruce/cpruce/TfDetectionLayer
+  - Cleanup and prepare branch to be merged.
+  - typo in rpn_probs dim fixed
+  - a little more cleanup. ran tests and coco validation matches master
+  - minor changes & more cleanup
+  - minor changes and clean up
+  - adding changes by LandyGuo
+  - fixing bugs
+  - adding waleeds tips
+  - shapes more-or-less match now. weights load. current error=InvalidArgumentError (see above for traceback): WhereOp: Unhandled input dimensions: 0
+  - changed tf.pad for gap and resued parse_image_meta
+  - Remove py_func for cross-environment serializability. Convert DetectionLayer/refine_detections to tf
+  - Fix call to image_reference()
+  - Link to projects using this model in README.
+  - Comment about settings workers=0 on Windows.
+  - On Windows, always run generator on main thread
+  - Fix bug: cannot display instances
+  - Update train_shapes.ipynb
+  - Automatically download trained model file
+  - PEP8 compliant
+  - Tested on Win/Ubu with notebook/cmd line
+  - Nake it easy to train and eval on MS-COCO
+  - Remove unnecessary function call from within a loop
+  - Fix masks shape comment for display_instances
+  - Update dependency list
+  - fix calling the baseclass methods with python3
+  - Fix casting when computing negative ROI count.
+  - Fix filtering out detections with area==0.
+  - Remove min confidence for COCO evaluation.
+  - Handle COCO crowds.
+  - Training optimizations.
+  - Reduce base learning rate to 0.001.
+  - Code clean up.
+  - Fix word
+  - support matplotlib 2.1.0
+  - Fix word
+  - fix cv2 function calling problem
+  - conform to pep8
+  - fix inspect_data error by adding gt_class_ids
+  - In coco.py add --limit to evaluation set size.
+  - Exclude BN gamma and beta from L2 regularization.
+  - Allow COCO evaluation on specific images.
+  - Add --logs argument to coco.py
+  - Better error message when bbox is missing.
+  - Refactor out overlap_graph() function
+  - Cleanup: split GT boxes and class IDs tensors.
+  - Remove display_detections(). Not used.
+  - Cleanup
+  - Pass model to evaluate_coco() to allow importing.
+  - Remove proposals zero padding
+  - Use mean L2 regularization loss rather than sum.
+  - fix variable name
+  - Update coco.py
+  - Fix misspelling.
+  - in detect function,length of images must be equal to BATCH_SIZE
+  - Update comments.
+  - modify DetectionLayer to support batch_size > 1
+  - Fix for previous NMS fix.
+  - Rename config.print() to display() for Python 2.7
+  - Scipy imread() is deprecated. Use skimage instead.
+  - Fix to handle NMS v2 in TensorFlow 1.4.
+  - Links to download minival and valminusminival
+  - Add pycocotools to Requirements, Installation sections (#12)
+  - Merge pull request #10 from philferriere/patch-1
+  - Keep ipynb checkpoints, pycache, model file out of repo
+  - Initial commit
+

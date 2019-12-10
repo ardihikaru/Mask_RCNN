@@ -23,4 +23,7 @@ untuk persiapan environment python:
    3. Save changes:
    $ source /etc/profile
 6. Error: AttributeError: module 'tensorflow' has no attribute 'random_uniform'
+   Solution: https://www.tensorflow.org/api_docs/python/tf/keras/backend/random_uniform
+7. Error: AttributeError: module 'tensorflow' has no attribute 'Session'
+   Solution: 
 

@@ -30,9 +30,15 @@ with tf.device(device_name):
     sum_operation = tf.reduce_sum(dot_operation)
 
 startTime = datetime.now()
-with tf.Session(config=tf.ConfigProto(log_device_placement=True)) as session:
-    result = session.run(sum_operation)
-    print(result)
+
+try:
+    with tf.Session(config=tf.ConfigProto(log_device_placement=True)) as session:
+        result = session.run(sum_operation)
+        print(result)
+except:
+    with tf.compat.v1.Session(config=tf.ConfigProto(log_device_placement=True)) as session:
+        result = session.run(sum_operation)
+        print(result)
 
 # It can be hard to see the results on the terminal with lots of output -- add some newlines to improve readability.
 print("\n" * 5)

@@ -12,6 +12,8 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 import tensorflow as tf
 from datetime import datetime
 
+print(" >>>> Tensorflow VERSION = ", tf.__version__)
+
 device_name = sys.argv[1]  # Choose device from cmd line. Options: gpu or cpu
 shape = (int(sys.argv[2]), int(sys.argv[2]))
 if device_name == "gpu":

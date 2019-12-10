@@ -22,7 +22,10 @@ else:
     device_name = "/cpu:0"
 
 with tf.device(device_name):
-    random_matrix = tf.random_uniform(shape=shape, minval=0, maxval=1)
+    try:
+        random_matrix = tf.random_uniform(shape=shape, minval=0, maxval=1)
+    except:
+        random_matrix = tf.keras.backend.random_uniform(shape=shape, minval=0, maxval=1)
     dot_operation = tf.matmul(random_matrix, tf.transpose(random_matrix))
     sum_operation = tf.reduce_sum(dot_operation)
 

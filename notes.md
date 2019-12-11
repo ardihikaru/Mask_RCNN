@@ -9,7 +9,7 @@ untuk persiapan environment python:
    $ pip install numpy scipy Pillow cython matplotlib scikit-image opencv-python h5py imgaug IPython[all]
 3. Running setup:
    $ python setup.py install
-4. Another dep:
+4. Another dep: (bikin error!)
    $ sudo apt install nvidia-cuda-dev
 5. Error: ImportError: libcublas.so.8.0
    Solution: https://github.com/tensorflow/tensorflow/issues/16136
